@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Approval Prediction</title>
+</head>
+<body>
+    <h1>Credit Card Approval Predictor</h1>
+    <form action="/predict" method="post">
+        <label>Select Model:</label>
+        <select name="model" required>
+            <option value="logistic">Logistic Regression</option>
+            <option value="tree">Decision Tree</option>
+        </select><br><br>
+
+        <label>Credit Policy:</label>
+        <input type="number" name="credit_policy" required><br>
+        
+        <label>Purpose:</label>
+        <input type="text" name="purpose" required><br>
+        
+        <label>Interest Rate:</label>
+        <input type="number" step="0.01" name="int_rate" required><br>
+        
+        <label>Installment:</label>
+        <input type="number" step="0.01" name="installment" required><br>
+        
+        <label>Log Annual Income:</label>
+        <input type="number" step="0.01" name="log_annual_inc" required><br>
+        
+        <label>Debt-to-Income Ratio (DTI):</label>
+        <input type="number" step="0.01" name="dti" required><br>
+        
+        <label>FICO Score:</label>
+        <input type="number" name="fico" required><br>
+        
+        <label>Days with Credit Line:</label>
+        <input type="number" step="0.01" name="days_with_cr_line" required><br>
+        
+        <label>Revolving Balance:</label>
+        <input type="number" name="revol_bal" required><br>
+        
+        <label>Revolving Utilization:</label>
+        <input type="number" step="0.01" name="revol_util" required><br>
+        
+        <label>Inquiries in Last 6 Months:</label>
+        <input type="number" name="inq_last_6mths" required><br>
+        
+        <label>Delinquencies in 2 Years:</label>
+        <input type="number" name="delinq_2yrs" required><br>
+        
+        <label>Public Records:</label>
+        <input type="number" name="pub_rec" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
